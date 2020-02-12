@@ -1,2 +1,2 @@
-# SimpleNetworkOperationUsing-MVVM-LiveData-Retrofit-GET-
+# SimpleNetworkOperationUsing-MVVM-LiveData-Retrofit
 A simple network operation (GET request) using MVVM, LiveData and Retrofit. 
