@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+
+
+    <TextView
+        android:id="@+id/tvFirstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/ivProfilePhoto"
+        android:singleLine="true"
+        android:text="First Name"
+        android:textColor="#000"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/ivProfilePhoto"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignTop="@+id/tvLastName"
+        android:layout_marginRight="15dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_account_circle_black_24dp" />
+
+    <TextView
+        android:id="@+id/tvLastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvFirstName"
+        android:layout_toEndOf="@+id/ivProfilePhoto"
+        android:layout_toRightOf="@+id/ivProfilePhoto"
+        android:text="Last Name" />
+
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvLastName"
+        android:layout_toEndOf="@+id/ivProfilePhoto"
+        android:layout_toRightOf="@+id/ivProfilePhoto"
+        android:text="Email" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tvEmail"
+        android:layout_marginTop="8dp"
+        android:background="#ECF0F1" />
+</RelativeLayout>
