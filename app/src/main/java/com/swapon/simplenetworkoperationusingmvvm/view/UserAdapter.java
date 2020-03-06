@@ -8,10 +8,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
 import com.swapon.simplenetworkoperationusingmvvm.R;
+import com.swapon.simplenetworkoperationusingmvvm.databinding.ItemLayoutUserBinding;
 import com.swapon.simplenetworkoperationusingmvvm.model.pojo.User;
 
 import java.util.List;
@@ -31,24 +33,16 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        LayoutInflater layoutInflater = LayoutInflater.from(mContext);
-        View view = layoutInflater.inflate(R.layout.item_layout_user, parent, false);
-        ViewHolder viewHolder = new ViewHolder(view);
+        ItemLayoutUserBinding itemLayoutUserBinding = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()), R.layout.item_layout_user, parent, false);
+        ViewHolder viewHolder = new ViewHolder(itemLayoutUserBinding);
         return viewHolder;
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        holder.tvFirstName.setText(mData.get(position).getFirstName());
-        holder.tvLastName.setText(mData.get(position).getLastName());
-        holder.tvEmail.setText(mData.get(position).getEmail());
-
-        Picasso.get()
-                .load(mData.get(position).getAvatar())
-                //.placeholder(R.drawable.user_placeholder)
-               // .error(R.drawable.user_placeholder_error)
-                .into(holder.ivProfilePhoto);
+        User.UserData userData = mData.get(position);
+        holder.itemLayoutUserBinding.setUserData(userData);
 
 
     }
@@ -70,17 +64,16 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        private TextView tvFirstName, tvLastName, tvEmail;
-        private ImageView ivProfilePhoto;
 
+        ItemLayoutUserBinding itemLayoutUserBinding;
 
-        public ViewHolder(@NonNull View itemView) {
-            super(itemView);
+        public ViewHolder(@NonNull ItemLayoutUserBinding binding) {
+            super(binding.getRoot());
 
-            tvFirstName = itemView.findViewById(R.id.tvFirstName);
-            tvLastName = itemView.findViewById(R.id.tvLastName);
-            tvEmail = itemView.findViewById(R.id.tvEmail);
-            ivProfilePhoto = itemView.findViewById(R.id.ivProfilePhoto);
+            this.itemLayoutUserBinding = binding;
+
         }
+
+
     }
 }

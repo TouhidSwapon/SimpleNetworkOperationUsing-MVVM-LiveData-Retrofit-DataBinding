@@ -1,7 +1,12 @@
 package com.swapon.simplenetworkoperationusingmvvm.model.pojo;
 
+import android.widget.ImageView;
+
+import androidx.databinding.BindingAdapter;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -121,6 +126,14 @@ public class User {
         public void setAvatar(String avatar) {
             this.avatar = avatar;
         }
+
+    }
+
+    @BindingAdapter("avatar")
+    public static void loadImage(ImageView imageView, String url){
+        Picasso.get()
+                .load(url)
+                .into(imageView);
 
     }
 
