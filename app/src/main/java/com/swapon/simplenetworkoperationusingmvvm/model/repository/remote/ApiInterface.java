@@ -1,4 +1,4 @@
-package com.swapon.simplenetworkoperationusingmvvm.api;
+package com.swapon.simplenetworkoperationusingmvvm.model.repository.remote;
 
 import com.swapon.simplenetworkoperationusingmvvm.utills.URLSettings;
 

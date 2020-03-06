@@ -3,7 +3,6 @@ package com.swapon.simplenetworkoperationusingmvvm.view;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -11,7 +10,7 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.swapon.simplenetworkoperationusingmvvm.R;
-import com.swapon.simplenetworkoperationusingmvvm.model.User;
+import com.swapon.simplenetworkoperationusingmvvm.model.pojo.User;
 import com.swapon.simplenetworkoperationusingmvvm.viewmodel.UserActivityViewModel;
 
 public class UserActivity extends AppCompatActivity {

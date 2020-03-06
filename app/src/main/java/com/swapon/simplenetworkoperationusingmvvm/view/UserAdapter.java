@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
 import com.swapon.simplenetworkoperationusingmvvm.R;
-import com.swapon.simplenetworkoperationusingmvvm.model.User;
+import com.swapon.simplenetworkoperationusingmvvm.model.pojo.User;
 
 import java.util.List;
 

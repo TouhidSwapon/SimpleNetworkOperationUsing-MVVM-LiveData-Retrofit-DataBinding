@@ -1,4 +1,4 @@
-package com.swapon.simplenetworkoperationusingmvvm.api;
+package com.swapon.simplenetworkoperationusingmvvm.model.repository.remote;
 
 import android.util.Log;
 

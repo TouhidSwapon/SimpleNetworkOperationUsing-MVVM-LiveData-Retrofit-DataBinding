@@ -6,8 +6,8 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
-import com.swapon.simplenetworkoperationusingmvvm.model.User;
-import com.swapon.simplenetworkoperationusingmvvm.model.UserRepository;
+import com.swapon.simplenetworkoperationusingmvvm.model.pojo.User;
+import com.swapon.simplenetworkoperationusingmvvm.model.repository.UserRepository;
 
 public class UserActivityViewModel extends AndroidViewModel {
 

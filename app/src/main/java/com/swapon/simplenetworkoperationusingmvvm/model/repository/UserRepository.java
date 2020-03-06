@@ -1,13 +1,13 @@
-package com.swapon.simplenetworkoperationusingmvvm.model;
+package com.swapon.simplenetworkoperationusingmvvm.model.repository;
 
 import android.app.Application;
-import android.util.Log;
 
 import androidx.lifecycle.MutableLiveData;
 
 import com.google.gson.Gson;
-import com.swapon.simplenetworkoperationusingmvvm.api.ApiClient;
-import com.swapon.simplenetworkoperationusingmvvm.api.ApiInterface;
+import com.swapon.simplenetworkoperationusingmvvm.model.repository.remote.ApiClient;
+import com.swapon.simplenetworkoperationusingmvvm.model.repository.remote.ApiInterface;
+import com.swapon.simplenetworkoperationusingmvvm.model.pojo.User;
 
 
 import java.io.IOException;
